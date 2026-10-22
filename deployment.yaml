@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hospital-portal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hospital-portal
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: hospital-portal
+    spec:
+      containers:
+        - name: hospital-portal
+          image: YOUR_DOCKERHUB_USERNAME/hospital-portal:initial
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
