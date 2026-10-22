@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital | Appointments</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #203040;
+            background: #f3f8fb;
+        }
+        header {
+            background: #087e8b;
+            color: white;
+            padding: 28px 8%;
+        }
+        header h1 {
+            margin: 0 0 8px;
+        }
+        nav {
+            background: #05616b;
+            padding: 12px 8%;
+        }
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1100px;
+            margin: 24px auto;
+            padding: 0 18px;
+        }
+        .notice {
+            background: #e0f4f1;
+            border-left: 5px solid #087e8b;
+            padding: 14px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+        }
+        .card {
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000012;
+        }
+        .card h3 {
+            color: #087e8b;
+            margin-top: 0;
+        }
+        .slot {
+            display: inline-block;
+            background: #e8f2ff;
+            padding: 6px 9px;
+            margin: 4px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #e6eef2;
+            margin-top: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CityCare Hospital</h1>
+        <p>Compassionate care. Convenient appointments.</p>
+    </header>
+
+    <nav>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointments">Appointment Slots</a>
+        <a href="#announcements">Announcements</a>
+    </nav>
+
+    <main>
+        <section class="notice" id="announcements">
+            <strong>Hospital announcement:</strong> General consultation appointments are available Monday to Saturday. Please arrive 15 minutes before your appointment.
+        </section>
+
+        <h2 id="doctors">Our Doctors</h2>
+        <section class="grid">
+            <article class="card">
+                <h3>Dr. Ananya Rao</h3>
+                <p><b>Specialization:</b> Cardiology</p>
+                <p><b>Consultation:</b> 9:00 AM – 1:00 PM</p>
+            </article>
+
+            <article class="card">
+                <h3>Dr. Vikram Shah</h3>
+                <p><b>Specialization:</b> Dermatology</p>
+                <p><b>Consultation:</b> 10:00 AM – 2:00 PM</p>
+            </article>
+
+            <article class="card">
+                <h3>Dr. Meera Iyer</h3>
+                <p><b>Specialization:</b> Pediatrics</p>
+                <p><b>Consultation:</b> 2:00 PM – 6:00 PM</p>
+            </article>
+        </section>
+
+        <h2 id="appointments">Available Appointment Slots</h2>
+        <section class="card">
+            <span class="slot">09:30 AM</span>
+            <span class="slot">10:00 AM</span>
+            <span class="slot">11:30 AM</span>
+            <span class="slot">02:30 PM</span>
+            <span class="slot">04:00 PM</span>
+        </section>
+
+        <h2>Appointment Information</h2>
+        <section class="card">
+            <p>Contact the hospital reception to confirm a slot. Availability shown here is sample information for this practical demonstration.</p>
+        </section>
+    </main>
+
+    <footer>CityCare Hospital | Emergency care: contact local emergency services</footer>
+
+</body>
+</html>
